@@ -1,0 +1,258 @@
+# Exercice 1
+nom = input("Saisissez votre nom : ")
+print("Bienvenue", nom, "!")
+
+# Exercice 2
+a = int(input("Saisissez un premier nombre : "))
+b = int(input("Saisissez un deuxième nombre : "))
+print("La somme de", a, "et", b, "est", a + b)
+
+# Exercice 3
+a = int(input("Saisissez un premier nombre : "))
+b = int(input("Saisissez un deuxième nombre : "))
+print("Le maximum de", a, "et", b, "est", max(a, b))
+
+# Exercice 4
+for i in range(1, 101):
+  print(i)
+
+# Exercice 5
+nombre = int(input("Saisissez un nombre entier : "))
+if nombre % 2 == 0:
+  print(nombre, "est pair")
+else:
+  print(nombre, "est impair")
+
+# Exercice 6
+age = int(input("Saisissez votre âge : "))
+if age >= 18:
+  print("Vous êtes majeur !")
+else:
+  print("Vous êtes mineur !")
+
+# Exercice 7
+x = int(input("Saisissez un premier nombre : "))
+y = int(input("Saisissez un deuxième nombre : "))
+z = int(input("Saisissez un troisième nombre : "))
+print("Le maximum de", x, ",", y, "et", z, "est", max(x, y, z))
+
+# Exercice 8
+n = int(input("Saisissez un nombre entier : "))
+print("La somme de 1 à", n, "est", (n * (n + 1)) // 2)
+
+# Exercice 9
+n = int(input("Saisissez un nombre entier : "))
+for i in range(1, n + 1):
+  print(i, "Ai")
+# Exercice 12
+# 1) Demander à l'utilisateur de saisir un nombre entier et afficher sa table de multiplication
+nombre = int(input("Saisissez un nombre entier : "))
+print("Table de multiplication de", nombre, ":")
+for i in range(1, 11):
+  print(nombre, "x", i, "=", nombre * i)
+
+# 2) Améliorer le programme pour afficher les tables de multiplication de tous les nombres compris entre 1 et 9
+print("\nTables de multiplication de 1 à 9 :")
+for n in range(1, 10):
+  print("Table de multiplication de", n, ":")
+  for i in range(1, 11):
+    print(n, "x", i, "=", n * i)
+
+# Exercice 13
+a = int(input("Saisissez un nombre entier a : "))
+b = int(input("Saisissez un nombre entier b : "))
+quotient = a // b
+reste = a % b
+print("Le quotient de la division euclidienne de", a, "par", b, "est", quotient)
+print("Le reste de la division euclidienne de", a, "par", b, "est", reste)
+
+# Exercice 14
+n = int(input("Saisissez un nombre entier n : "))
+racine_carree = n ** 0.5
+if racine_carree == int(racine_carree):
+  print(n, "est un carré parfait")
+else:
+  print(n, "n'est pas un carré parfait")
+
+# Exercice 15
+n = int(input("Saisissez un nombre entier n : "))
+est_premier = True
+for i in range(2, int(n ** 0.5) + 1):
+  if n % i == 0:
+    est_premier = False
+    break
+if est_premier:
+  print(n, "est un nombre premier")
+else:
+  print(n, "n'est pas un nombre premier")
+
+# Exercice 16
+chaine = "Python"
+print("Caractères de la chaîne", chaine, ":")
+for caractere in chaine:
+  print(caractere)
+
+# Exercice 17
+chaine = "Python.org"
+print("Nombre d'occurrences de chaque caractère dans la chaîne", chaine, ":")
+for caractere in chaine:
+  nombre_occurrences = chaine.count(caractere)
+  print("Le caractère", caractere, "figure", nombre_occurrences, "fois dans la chaîne")
+# Exercice 18
+chaine = input("Saisissez une chaîne de caractères : ")
+lettre = input("Saisissez une lettre : ")
+if lettre in chaine:
+  print("La lettre", lettre, "se trouve à la position", chaine.index(lettre))
+else:
+  print("La lettre", lettre, "n'est pas présente dans la chaîne")
+
+# Exercice 19
+liste = ["laptop", "iphone", "tablet"]
+print("Chaînes de la liste et leurs longueurs :")
+for element in liste:
+  print(element, ":", len(element))
+
+# Exercice 20
+chaine = input("Saisissez une chaîne de caractères : ")
+if len(chaine) > 1:
+  nouveau_chaine = chaine[-1] + chaine[1:-1] + chaine[0]
+  print("Chaîne après échange du premier et du dernier caractère :", nouveau_chaine)
+else:
+  print("La chaîne doit contenir au moins 2 caractères")
+
+# Exercice 21
+chaine = input("Saisissez une chaîne de caractères : ")
+nombre_voyelles = 0
+voyelles = "aeiouyAEIOUY"
+for caractere in chaine:
+  if caractere in voyelles:
+    nombre_voyelles += 1
+print("La chaîne", chaine, "possède", nombre_voyelles, "voyelles")
+
+# Exercice 22
+texte = input("Saisissez un texte : ")
+premier_mot = texte.split()[0]
+print("Premier mot du texte :", premier_mot)
+
+# Exercice 23
+fichier = input("Saisissez le nom d'un fichier : ")
+extension = fichier.split(".")[-1]
+print("Extension du fichier :", extension)
+
+# Exercice 24
+mot = input("Saisissez un mot : ")
+if mot == mot[::-1]:
+  print(mot, "est un palindrome")
+else:
+  print(mot, "n'est pas un palindrome")
+
+# Exercice 25
+mot = input("Saisissez un mot : ")
+inverse = mot[::-1]
+print("Inverse du mot :", inverse)
+
+import itertools
+
+# Exercice 28 - Tester si une liste est vide ou non
+def est_liste_vide(liste):
+    return len(liste) == 0
+
+# Exercice 28 - Tester si une chaîne de caractères est vide ou non
+def est_chaine_vide(chaine):
+    return len(chaine) == 0
+
+# Exercice 29 - Supprimer les éléments dupliqués d'une liste
+def supprimer_doublons(liste):
+    return list(set(liste))
+
+# Exercice 30 - Comparer deux listes et vérifier si elles ont une valeur commune
+def ont_valeur_commune(liste1, liste2):
+    return not set(liste1).isdisjoint(set(liste2))
+
+# Exercice 31 - Extraire la liste des entiers pairs et la liste des entiers impairs
+def extraire_pairs_impairs(liste):
+    pairs = [x for x in liste if x % 2 == 0]
+    impairs = [x for x in liste if x % 2 != 0]
+    return pairs, impairs
+
+# Exercice 32 - Renvoyer toutes les permutations d'une liste
+def permutations(liste):
+    return list(itertools.permutations(liste))
+
+# Exercice 33 - Afficher les caractères d'indice pair d'une chaîne de caractères
+def caracteres_indice_pair(chaine):
+    return ''.join([chaine[i] for i in range(len(chaine)) if i % 2 == 0])
+
+# Exercice 34 - Extraire les notes supérieures à la moyenne
+def notes_superieures_moyenne(notes):
+    moyenne = sum(notes) / len(notes)
+    return [note for note in notes if note > moyenne]
+
+# Exercice 35 - Transformer une URL saisie en un lien
+def transformer_en_lien(url):
+    if not url.startswith("http://") and not url.startswith("https://"):
+        url = "http://" + url
+    return url
+
+# Exercice 36 - Supprimer les espaces multiples dans une chaîne
+def supprimer_espaces_multiples(chaine):
+    return ' '.join(chaine.split())
+
+# Exercice 37 - Regrouper dans une liste les mots
+def regrouper_mots(chaine):
+    return chaine.split()
+
+# Tests
+if __name__ == "__main__":
+    # Test pour est_liste_vide
+    ma_liste = []
+    print("La liste est vide :", est_liste_vide(ma_liste))
+    
+    ma_liste = [1, 2, 3]
+    print("La liste est vide :", est_liste_vide(ma_liste))
+
+    # Test pour est_chaine_vide
+    ma_chaine = ""
+    print("La chaîne est vide :", est_chaine_vide(ma_chaine))
+    
+    ma_chaine = "Bonjour"
+    print("La chaîne est vide :", est_chaine_vide(ma_chaine))
+
+    # Test pour supprimer_doublons
+    ma_liste = [1, 2, 2, 3, 4, 4, 5]
+    print("Liste sans doublons :", supprimer_doublons(ma_liste))
+
+    # Test pour ont_valeur_commune
+    liste_a = [1, 2, 3]
+    liste_b = [3, 4, 5]
+    print("Les listes ont une valeur commune :", ont_valeur_commune(liste_a, liste_b))
+
+    # Test pour extraire_pairs_impairs
+    nombres = [1, 2, 3, 4, 5, 6]
+    pairs, impairs = extraire_pairs_impairs(nombres)
+    print("Pairs :", pairs)
+    print("Impairs :", impairs)
+
+    # Test pour permutations
+    ma_liste = [1, 2, 3]
+    print("Permutations :", permutations(ma_liste))
+
+    # Test pour caracteres_indice_pair
+    ma_chaine = "Python"
+    print("Caractères d'indice pair :", caracteres_indice_pair(ma_chaine))
+
+    # Test pour notes_superieures_moyenne
+    notes = [12.04, 14.11, 18.13, 07.10, 05.09, 15.08, 14.16]
+    print("Notes supérieures à la moyenne :", notes_superieures_moyenne(notes))
+
+    # Test pour transformer_en_lien
+    url_saisie = input("Entrez une URL : ")
+    print("Lien transformé :", transformer_en_lien(url_saisie))
+
+    # Test pour supprimer_espaces_multiples
+    ma_chaine = "Ceci   est   un   test."
+    print("Chaîne sans espaces multiples :", supprimer_espaces_multiples(ma_chaine))
+
+    # Test pour regrouper_mots
+    ma_chaine = "Bonjour tout le monde"
+    print("Liste des mots :", regrouper_mots(ma_chaine))
